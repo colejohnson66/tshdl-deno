@@ -96,4 +96,5 @@ function getSourceInfo(position = 0, assertFailure = false): SourceInfo | null {
     return null;
 }
 
-export type { SourceInfo, getSourceInfo };
+export type { SourceInfo }
+export { getSourceInfo };

@@ -111,4 +111,5 @@ class Range {
     }
 }
 
-export type { IDictionary, Range };
+export type { IDictionary };
+export { Range };
