@@ -1,0 +1,10 @@
+{
+    "deno.enable": true,
+    "files.insertFinalNewline": true,
+    "cSpell.words": [
+        "deno",
+        "reimplementation",
+        "tshdl",
+        "unextractable"
+    ],
+}
