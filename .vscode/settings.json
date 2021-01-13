@@ -2,8 +2,10 @@
     "deno.enable": true,
     "files.insertFinalNewline": true,
     "cSpell.words": [
+        "DUID",
         "deno",
         "reimplementation",
+        "signedness",
         "tshdl",
         "unextractable"
     ],
