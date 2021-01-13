@@ -19,7 +19,7 @@ type SourceInfo = {
  * $3: ${column}
  * ````
  */
-const StackTraceEntryMatch3 = /    at ([^:]+):(\d+):(\d+)/;
+const StackTraceEntryMatch3 = / {4}at ([^:]+):(\d+):(\d+)/;
 /**
  * ````
  * // matches  `    at ${func} (${file}:${line}:${column})`
@@ -29,7 +29,7 @@ const StackTraceEntryMatch3 = /    at ([^:]+):(\d+):(\d+)/;
  * $4: ${column}
  * ````
  */
-const StackTraceEntryMatch4 = /    at ([^ ]+) \(([^:]+):(\d+):(\d+)\)/;
+const StackTraceEntryMatch4 = / {4}at ([^ ]+) \(([^:]+):(\d+):(\d+)\)/;
 
 /**
  * Gets the info of the caller by generating and examining a stack trace.

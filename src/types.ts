@@ -2,7 +2,7 @@ import { assert } from "https://deno.land/std@0.60.0/testing/asserts.ts"
 
 interface IDictionary<T> {
     [id: string]: T;
-};
+}
 
 type RangeNamedArgs = {
     start?: number,

@@ -25,23 +25,22 @@ function bitLength(n: number | bigint, zeroIsZero = false): number {
 
 /**
  * `log_2{n}`, but returns an integer.
- * If `need_pow2` is `true`, an exception will be thrown on non-power-of-2 values of `n`.
  * 
  * @param n The number to process
- * @param need_pow2 Whether `n` must be a power of 2 or now
+ * @param needPow2 Whether `n` must be a power of 2 or now
  * 
  * @default
- * need_pow2: true
+ * needPow2: true
  * 
- * @throws If `need_pow2` is `true`, but `n` is not a power of 2.
+ * @throws If `needPow2` is `true`, but `n` is not a power of 2.
  */
-function log2_int(n: number | bigint, need_pow2 = true): number {
+function log2Int(n: number | bigint, needPow2 = true): number {
     if (n === 0)
         return 0;
 
     n = BigInt(n);
     const r = bitLength(n - 1n);
-    if (need_pow2 && (1n << BigInt(r)) !== n)
+    if (needPow2 && (1n << BigInt(r)) !== n)
         throw `${n} is not a power of 2.`;
 
     return r;
@@ -64,10 +63,10 @@ function bitsFor(n: number | bigint, requireSignBit = false): number {
 
     let r: number;
     if (n > 0) {
-        r = log2_int(n + 1n, false);
+        r = log2Int(n + 1n, false);
     } else {
         requireSignBit = true;
-        r = log2_int(-n, false);
+        r = log2Int(-n, false);
     }
 
     if (requireSignBit)
@@ -75,4 +74,4 @@ function bitsFor(n: number | bigint, requireSignBit = false): number {
     return r;
 }
 
-export { bitLength, log2_int, bitsFor };
+export { bitLength, log2Int, bitsFor };
